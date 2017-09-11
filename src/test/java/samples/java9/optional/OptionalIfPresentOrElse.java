@@ -60,6 +60,7 @@ public class OptionalIfPresentOrElse {
 
         Optional<Preference> optionalPreferenceABC = PreferenceFactory.findOptionalPreference("ABC");
         optionalPreferenceABC.ifPresent(preferenceAction);
+        description = fakeValueGenerator.apply(description);
         assertEquals("ABC should map to a valid preference", "01_02_03", description);
 
         // Reset the description value.
